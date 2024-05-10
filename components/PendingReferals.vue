@@ -1,5 +1,5 @@
 <template>
-   <div class="container lg:w-10/12 mx-auto h-screen bg-white">
+   <div class="container lg:w-10/12 mx-auto h-screen bg-white text-black ">
   <nav class=" text-black  flex items-center justify-between py-5">
     <div class="flex items-center">
       <button @click="closepage" class="">
@@ -49,7 +49,7 @@
    
 </div>
 </div>
-<div class=" w-full bg-white flex items-center justify-center gap-1 py-2">
+<div class=" w-full bg-white flex items-center justify-center gap-1 py-2 text-black ">
   <h6 class="text-base mb-0">Looking for your referrals?</h6>
   <button onclick="callpage('pending_referrals.php')" class="text-base font-normal text-primary hover:underline">Referral Rewards</button>
 </div>

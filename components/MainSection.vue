@@ -14,7 +14,7 @@
       @pending-refferal-closed="closependingPage"
     />
   </div>
-  <div v-else>
+  <div v-else class="bg-white">
     <div>
       <div
         class="hero container mx-auto lg:w-10/12 justify-center shadow-sm rounded-md my-2"

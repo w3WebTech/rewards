@@ -1,9 +1,18 @@
 <template>
   <div v-if="this.isReferalRewards == true">
-    <ReferalRewards :referalRewardData="this.referalRewardData" :newRewardsCategory="this.newRewardsCategory" :lifeTimeRewardsCategory="this.lifeTimeRewardsCategory" :withdrawRewardsCategory="this.withdrawRewardsCategory"  @refferal-rewards-closed="closerefferalPage" />
+    <ReferalRewards
+      :referalRewardData="this.referalRewardData"
+      :newRewardsCategory="this.newRewardsCategory"
+      :lifeTimeRewardsCategory="this.lifeTimeRewardsCategory"
+      :withdrawRewardsCategory="this.withdrawRewardsCategory"
+      @refferal-rewards-closed="closerefferalPage"
+    />
   </div>
   <div v-else-if="this.isPendingReferal == true">
-    <PendingReferals :pendingReferalData="this.pendingReferalData" @pending-refferal-closed="closependingPage"/>
+    <PendingReferals
+      :pendingReferalData="this.pendingReferalData"
+      @pending-refferal-closed="closependingPage"
+    />
   </div>
   <div v-else>
     <div>
@@ -262,79 +271,70 @@ export default defineComponent({
           },
         ],
       },
-      pendingReferalData:{
-    "clientCode":"GZ10219",
-    "currentMonth": "feb",
+      pendingReferalData: {
+        clientCode: "GZ10219",
+        currentMonth: "feb",
 
-        "date": 1715081392,
-        "totalReferal": 18,
-        "referalInCurrentMonth": 10,
-        "totalRewards": 5000,
-        "rawards": [
-            {
-          "name":"TEST",
-          "date": 1715081392,
-          "accountDetails": [
-            {
-          "accountOpened":true,
-          "date": 1715081392
-          
-            },
-            {
-                "accountReadyToInvest":false,
-                
-                
-                  }
-        ]
-            },
-            {
-                "name":"TEST",
-                "date": 1715081392,
-                "accountDetails": [
-                  {
-                "accountOpened":true,
-                "date": 1715081392
-                
-                  },
-                  {
-                      "accountReadyToInvest":false,
-                      
-                      
-                        }
-              ]
-                  },
-                  {
-                    "name":"TEST",
-                    "date": 1715081392,
-                    "accountDetails": [
-                      {
-                    "accountOpened":true,
-                    "date": 1715081392
-                    
-                      },
-                      {
-                          "accountReadyToInvest":false,
-                          
-                          
-                            }
-                  ]
-                      }
-        ]
-},
-      newRewardsCategory:[],
-      lifeTimeRewardsCategory:[],
-      withdrawRewardsCategory:[]
+        date: 1715081392,
+        totalReferal: 18,
+        referalInCurrentMonth: 10,
+        totalRewards: 5000,
+        rawards: [
+          {
+            name: "TEST",
+            date: 1715081392,
+            accountDetails: [
+              {
+                accountOpened: true,
+                date: 1715081392,
+              },
+              {
+                accountReadyToInvest: false,
+              },
+            ],
+          },
+          {
+            name: "TEST",
+            date: 1715081392,
+            accountDetails: [
+              {
+                accountOpened: true,
+                date: 1715081392,
+              },
+              {
+                accountReadyToInvest: false,
+              },
+            ],
+          },
+          {
+            name: "TEST",
+            date: 1715081392,
+            accountDetails: [
+              {
+                accountOpened: true,
+                date: 1715081392,
+              },
+              {
+                accountReadyToInvest: false,
+              },
+            ],
+          },
+        ],
+      },
+      newRewardsCategory: [],
+      lifeTimeRewardsCategory: [],
+      withdrawRewardsCategory: [],
     };
   },
   mounted() {
     this.separatedRewards();
   },
   methods: {
-    closerefferalPage(){
-this.isReferalRewards=false;
+    closerefferalPage() {
+      this.isReferalRewards = false;
     },
-    closependingPage(){
-this.isPendingReferal=false;
+    closependingPage() {
+      this.isPendingReferal = false;
     },
     callpage(pageName) {
       if (pageName == "referral_rewards") {
@@ -348,7 +348,7 @@ this.isPendingReferal=false;
       this.isTerms = true;
     },
     separatedRewards() {
-      const referalData= {
+      const referalData = {
         startDate: 1715081392,
         endDate: 1715081392,
         newAccountOpened: 2,
@@ -409,24 +409,35 @@ this.isPendingReferal=false;
         ],
       };
 
-  if (referalData && Array.isArray(referalData.rawards)) {
-   this.newRewardsCategory = referalData.rawards.find((reward) => reward.title === "New");
-    console.log(this.newRewardsCategory, "newRewardsCategory");
-  } else {
-    console.warn("Referral data or rewards property is not defined or not an array");
-  }
-  if (referalData && Array.isArray(referalData.rawards)) {
-   this.lifeTimeRewardsCategory = referalData.rawards.find((reward) => reward.title === "LifeTime");
-   
-  } else {
-    console.warn("Referral data or rewards property is not defined or not an array");
-  }
-   if (referalData && Array.isArray(referalData.rawards)) {
-   this.withdrawRewardsCategory = referalData.rawards.find((reward) => reward.title === "Withdraw");
-   console.log(this.withdrawRewardsCategory,"withdrawRewardsCategory")
-  } else {
-    console.warn("Referral data or rewards property is not defined or not an array");
-  }
+      if (referalData && Array.isArray(referalData.rawards)) {
+        this.newRewardsCategory = referalData.rawards.find(
+          (reward) => reward.title === "New"
+        );
+        console.log(this.newRewardsCategory, "newRewardsCategory");
+      } else {
+        console.warn(
+          "Referral data or rewards property is not defined or not an array"
+        );
+      }
+      if (referalData && Array.isArray(referalData.rawards)) {
+        this.lifeTimeRewardsCategory = referalData.rawards.find(
+          (reward) => reward.title === "LifeTime"
+        );
+      } else {
+        console.warn(
+          "Referral data or rewards property is not defined or not an array"
+        );
+      }
+      if (referalData && Array.isArray(referalData.rawards)) {
+        this.withdrawRewardsCategory = referalData.rawards.find(
+          (reward) => reward.title === "Withdraw"
+        );
+        console.log(this.withdrawRewardsCategory, "withdrawRewardsCategory");
+      } else {
+        console.warn(
+          "Referral data or rewards property is not defined or not an array"
+        );
+      }
     },
   },
 });

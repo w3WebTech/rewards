@@ -93,7 +93,7 @@
             <h6 class="text-lg font-medium mb-0">SHARE LINK VIA WHATSAPP</h6>
           </button>
 
-          <div class="p-2 py-3 text-[#6876CD] text-sm font-semibold">
+          <div class="p-2 py-3 text-[#6876CD] text-sm font-semibold" onclick="my_modal_2.showModal()">
             Terms And Conditions
           </div>
         </div>
@@ -198,7 +198,25 @@
         </div>
       </div>
     </div>
+      
+  <div class="w-10/12">
+    <dialog id="my_modal_2" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Terms & Conditions</h3>
+    
+      <div>
+        <p class="py-1" v-for="item in this.termsAndConditions" :key="item"> {{item}} </p>
+      </div>
+  
   </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+  </div>
+
+  </div>
+   
 </template>
 <script>
 import axios from "axios";
@@ -208,6 +226,7 @@ export default defineComponent({
 
   data() {
     return {
+      showBottomSheet:false,
       isTerms: false,
       isReferalRewards: false,
       isPendingReferal: false,
@@ -321,6 +340,13 @@ export default defineComponent({
           },
         ],
       },
+      termsAndConditions:[
+        "1. Each lead has 30 days of validity to receive rewards",
+        "2. If the lead does not open UCC within the first 30 days then there would be no rewards",
+        "3. The Investor should made minimum investment of Rs 5000 in Trading account",
+          "4. Referrers will receive their rewards on the next working day following the receipt of a payin minimum Rs 5000 and also 1 trade by the Referral.",
+          "5. 20% brokerage revenue will be shared life-time and earned brokerage will be processed on 1st of every month."
+      ],
       newRewardsCategory: [],
       lifeTimeRewardsCategory: [],
       withdrawRewardsCategory: [],
@@ -443,5 +469,15 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+.modal {
+  align-items: end !important;
+}
+.modal-box {
+  width:100% !important;
+  max-width:100% !important;
+  border-bottom-left-radius:0 !important;
+  border-bottom-right-radius:0 !important;
+  transition: all 450ms cubic-bezier(0.32,1,0.23,1) 0ms !important;
+}
 </style>
 

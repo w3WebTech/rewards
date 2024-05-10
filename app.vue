@@ -20,7 +20,7 @@ export default {
  localStorage.setItem('clientName', JSON.stringify(clientName));
  localStorage.setItem('clientCode', JSON.stringify(clientemail));
  
-    this.$router.push('/homePage');
+    // this.$route.push('/homePage');
   
 
     console.log('Client Code:', clientCode);

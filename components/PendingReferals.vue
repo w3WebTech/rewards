@@ -1,5 +1,5 @@
 <template>
-   <div class="container lg:w-10/12 mx-auto mt-10 h-screen bg-white text-black ">
+   <div class="container lg:w-10/12 mx-auto  h-screen bg-white text-black ">
   <nav class=" text-black  flex items-center justify-between ">
     <div class="flex items-center">
       <button @click="closepage" class="">

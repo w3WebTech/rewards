@@ -478,6 +478,8 @@ export default defineComponent({
   border-bottom-left-radius:0 !important;
   border-bottom-right-radius:0 !important;
   transition: all 450ms cubic-bezier(0.32,1,0.23,1) 0ms !important;
+  background-color: white !important;
+  color:black !important;
 }
 .container{
   width:90% !important;

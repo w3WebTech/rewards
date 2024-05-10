@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2015", // Set target ECMAScript version (adjust as needed)
+    "lib": ["dom", "dom.iterable", "esnext"], // Standard library
+    "allowJs": true, // Allow JavaScript files to be included
+    "skipLibCheck": true, // Skips type checking of library files
+    "esModuleInterop": true, // Enables ES module interop
+    "allowSyntheticDefaultImports": true, // Allow synthetic default imports
+    "strict": true, // Enable strict mode for type safety
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file name casing
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough cases in switch statements
+    "module": "commonjs", // Output module format (adjust as needed)
+    "outDir": "./dist/types", // Output directory for generated type files (optional)
+    "rootDir": "./src", // Root directory for type checking (optional)
+    "baseUrl": "./src", // Base directory for type resolution (optional)
+  },
+  "include": ["**/*.ts", "**/*.tsx"] // Include all TypeScript files for type checking
+}

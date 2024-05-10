@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto lg:w-10/12 mt-5 h-screen bg-white text-black ">
+  <div class="container mx-auto lg:w-10/12 mt-5  bg-white text-black ">
     <nav class="navbar navbar-dark bg-dark">
       <div class="flex justify-content-between items-center">
         <button

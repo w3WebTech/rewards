@@ -199,7 +199,7 @@
       </div>
     </div>
       
-  <div class="w-10/12">
+  <div class="w-10/12 bg-white">
     <dialog id="my_modal_2" class="modal">
   <div class="modal-box">
     <h3 class="font-bold text-lg">Terms & Conditions</h3>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="this.isReferalRewards == true">
+  <div v-if="this?.isReferalRewards == true">
     <ReferalRewards
       :referalRewardData="this.referalRewardData"
       :newRewardsCategory="this.newRewardsCategory"
@@ -331,14 +331,14 @@ export default defineComponent({
   },
   methods: {
     closerefferalPage() {
-      this.isReferalRewards = false;
+      this?.isReferalRewards = false;
     },
     closependingPage() {
       this.isPendingReferal = false;
     },
     callpage(pageName) {
       if (pageName == "referral_rewards") {
-        this.isReferalRewards = true;
+        this?.isReferalRewards = true;
       }
       if (pageName == "pending_referrals") {
         this.isPendingReferal = true;

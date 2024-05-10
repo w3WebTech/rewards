@@ -8,7 +8,7 @@
       @refferal-rewards-closed="closerefferalPage"
     />
   </div>
-  <div v-else-if="this.isPendingReferal == true">
+  <div v-else-if="this?.isPendingReferal == true">
     <PendingReferals
       :pendingReferalData="this.pendingReferalData"
       @pending-refferal-closed="closependingPage"

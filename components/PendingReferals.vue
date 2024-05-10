@@ -1,5 +1,5 @@
 <template>
-   <div class="container w-10/12 mx-auto h-screen bg-white">
+   <div class="container lg:w-10/12 mx-auto h-screen bg-white">
   <nav class=" text-black  flex items-center justify-between py-5">
     <div class="flex items-center">
       <button @click="closepage" class="">
@@ -85,3 +85,8 @@ console.log(this.pendingReferalData,this.pendingReferalData.rewards,"this.pendin
   },
 };
 </script>
+<style scoped>
+.container{
+  width:90% !important;
+}
+</style>

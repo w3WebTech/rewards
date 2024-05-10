@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto w-10/12 h-screen bg-white">
+  <div class="container mx-auto lg:w-10/12 h-screen bg-white">
     <nav class="navbar navbar-dark bg-dark">
       <div class="flex justify-content-between items-center">
         <button
@@ -175,5 +175,8 @@ closepage(){
 .card-body {
   padding:15px !important;
   
+}
+.container{
+  width:90% !important;
 }
 </style>

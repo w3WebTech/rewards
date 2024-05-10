@@ -469,6 +469,19 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+@media (prefers-color-scheme: dark) {
+   body {
+          background-color: #fff;
+     color: #000;
+   }
+ }
+
+ @media (prefers-color-scheme: light) {
+   body {
+     background-color: #fff;
+     color: #000;
+   }
+ }
 .modal {
   align-items: end !important;
 }

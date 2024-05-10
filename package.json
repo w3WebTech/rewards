@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:vercel": "nuxt generate",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",

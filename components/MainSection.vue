@@ -1,5 +1,5 @@
 <template>
-  <div v-if="this?.isReferalRewards == true">
+  <div v-if="this?.isReferalRewards == true" class="bg-white">
     <ReferalRewards
       :referalRewardData="this.referalRewardData"
       :newRewardsCategory="this.newRewardsCategory"
@@ -8,7 +8,7 @@
       @refferal-rewards-closed="closerefferalPage"
     />
   </div>
-  <div v-else-if="this?.isPendingReferal == true">
+  <div v-else-if="this?.isPendingReferal == true" class="bg-white">
     <PendingReferals
       :pendingReferalData="this.pendingReferalData"
       @pending-refferal-closed="closependingPage"

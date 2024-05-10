@@ -205,7 +205,7 @@
     <h3 class="font-bold text-lg">Terms & Conditions</h3>
     
       <div>
-        <p class="py-1" v-for="item in this.termsAndConditions" :key="item"> {{item}} </p>
+        <p class="py-1" v-for="item in this?.termsAndConditions" :key="item"> {{item}} </p>
       </div>
   
   </div>
